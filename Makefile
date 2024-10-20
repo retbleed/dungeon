@@ -10,18 +10,15 @@ prepare:
 prebuild:
 	@echo "Prebuilding the project..."
 	@cd $(BUILD_DIR) && cmake ..
-	@cd ..
 	@echo "Done."
 
-build:
+to-build:
 	@echo "Building the project..."
 	@cd $(BUILD_DIR) && make
-	@if [ -f $(BUILD_DIR)/$(EXE_NAME) ]; then echo "Build successful: $(EXE_NAME) found."; else echo "Build failed: $(EXE_NAME) not found."; if
-	@cd ..
+	@if [ -f $(BUILD_DIR)/$(EXE_NAME) ]; then echo "Build successful: $(EXE_NAME) found."; else echo "Build failed: $(EXE_NAME) not found."; fi
 	@echo "Done."
 
 run:
 	@echo "Running the project..."
 	@cd $(BUILD_DIR) && ./$(EXE_NAME)
-	@cd ..
 	@echo "Done."
