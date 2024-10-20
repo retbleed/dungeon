@@ -4,6 +4,7 @@
 
 // RAYLIB
 #include "raylib.h" 
+#include "utils.h"
 
 
 // CONSTANTS
@@ -29,7 +30,7 @@ int main() {
     }
     CloseWindow();
 
-    Font myFont = LoadFont("resources/Roboto-Regular.ttf");
+    // Font myFont = LoadFont("resources/Roboto-Regular.ttf");
 
     return 0;
 }
