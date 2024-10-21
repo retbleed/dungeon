@@ -16,7 +16,7 @@ target_link_libraries(dungeon m pthread dl)
 
 if(APPLE)
   set(CMAKE_OSX_ARCHITECTURES arm64) 
-  target_link_libraries(dungeon ${CMAKE_CURRENT_SOURCE_DIR}/lib/libraylib.a)
+  target_link_libraries(dungeon ${CMAKE_CURRENT_SOURCE_DIR}/lib/apple_arm64_libraylib.a)
   find_library(COCOA_LIBRARY Cocoa)
   find_library(GL_LIBRARY OpenGL)
   find_library(IOKIT_LIBRARY IOKit)
