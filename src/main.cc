@@ -20,17 +20,25 @@ int main() {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE_CSTR);
     SetTargetFPS(FRAME_LIMIT);
 
+    Font myFont_Regular = LoadFont("./../assets/fonts/BIZUDPMincho/BIZUDPMincho-Regular.ttf");
+
+    printf("Directory" + *GetWorkingDirectory());
+
     while (!WindowShouldClose()) {
         BeginDrawing();
 
-        ClearBackground(COLOR_PERFECT_ORANGE);
+        ClearBackground(WHITE);
 
-        DrawText("Jalando", 310, 400, 20, DARKGRAY);
+        DrawTextEx(myFont_Regular, "Dungeon", (Vector2){310, 400}, 20, 2, DARKGRAY);
+        DrawTextEx(myFont_Regular, "すみません", (Vector2){310, 450}, 20, 2, DARKGRAY);
+
         EndDrawing();
     }
-    CloseWindow();
 
-    // Font myFont = LoadFont("resources/Roboto-Regular.ttf");
+    UnloadFont(myFont_Regular);
+
+
+    CloseWindow();
 
     return 0;
 }

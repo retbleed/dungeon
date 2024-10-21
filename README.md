@@ -1,7 +1,10 @@
 # Dungeon
+- [X] Run on MacOS ARM64
+- [X] Run on Linux
+- [ ] Run on Windows
 
 
-## How to run [MacOS Only]
+## How to run [MacOS & Linux Only]
 Get gmake
 You can run this with `make` also.
 ```bash
@@ -20,17 +23,14 @@ gmake prebuild
 ```
 
 
-Follow this commands to make the build. (Haven't figure it out how to do it from the Makefile)
+Follow this commands to make the build.
 ```bash
-cd build
-gmake
-cd ..
+gamke to-build
 ```
 
 Run the program
 ```bash
 gmake run
 ```
-
 
 [notes](./docs/notes.md)
